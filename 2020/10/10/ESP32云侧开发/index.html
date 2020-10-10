@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="Rehot">
   <meta name="keywords" content="">
-  <title>云上服务器 - 刘小皓的博客</title>
+  <title>ESP32云侧开发 - 刘小皓的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -145,7 +145,7 @@
           <div class="container page-header text-center fade-in-up">
             <span class="h2" id="subtitle">
               
-                云上服务器
+                ESP32云侧开发
               
             </span>
 
@@ -155,8 +155,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-10-10 13:40" pubdate>
-        2020年10月10日 下午
+      <time datetime="2020-10-10 20:42" pubdate>
+        2020年10月10日 晚上
       </time>
     </span>
   
@@ -167,7 +167,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      444 字
+      452 字
     </span>
   
 
@@ -177,7 +177,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      6
        分钟
     </span>
   
@@ -215,79 +215,65 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">云上服务器</h1>
+            <h1 style="display: none">ESP32云侧开发</h1>
             
             <div class="markdown-body" id="post-body">
-              <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><h3 id="Docker进入实例中进行文件编辑"><a href="#Docker进入实例中进行文件编辑" class="headerlink" title="Docker进入实例中进行文件编辑"></a>Docker进入实例中进行文件编辑</h3><p>8d2281dd8cf6为实例ID</p>
-<pre><code class="hljs awk">$ sudo docker exec -it <span class="hljs-number">8</span>d2281dd8cf6 <span class="hljs-regexp">/bin/</span>bash
-$ <span class="hljs-keyword">exit</span></code></pre>
-<h3 id="Docker阿里云加速"><a href="#Docker阿里云加速" class="headerlink" title="Docker阿里云加速"></a>Docker阿里云加速</h3><pre><code class="hljs stylus">$ sudo docker login --username=liuchenhao891113@sina<span class="hljs-selector-class">.com</span> registry<span class="hljs-selector-class">.cn-hangzhou</span><span class="hljs-selector-class">.aliyuncs</span>.com
-&gt; lch891113</code></pre>
-<h3 id="Docker创建BT下载服务器容器"><a href="#Docker创建BT下载服务器容器" class="headerlink" title="Docker创建BT下载服务器容器"></a>Docker创建BT下载服务器容器</h3><pre><code class="hljs routeros">docker create \
-  <span class="hljs-attribute">--name</span>=qbittorrent \
-  -e <span class="hljs-attribute">PUID</span>=1000 \
-  -e <span class="hljs-attribute">PGID</span>=1000 \
-  -e <span class="hljs-attribute">TZ</span>=Aisa/Shanghai \
-  -e <span class="hljs-attribute">UMASK_SET</span>=022 \
-  -e <span class="hljs-attribute">WEBUI_PORT</span>=8081 \
-  -p 8999:8999 \
-  -p 8999:8999/udp \
-  -p 8081:8081 \
-  -v /path/<span class="hljs-keyword">to</span>/appdata/config:<span class="hljs-built_in">/config </span>\
-  -v /path/<span class="hljs-keyword">to</span>/downloads:/downloads \
-  --restart unless-stopped \
-  linuxserver/qbittorrent</code></pre>
-<h2 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h2><h3 id="Jupyter-Notebook相关操作"><a href="#Jupyter-Notebook相关操作" class="headerlink" title="Jupyter Notebook相关操作"></a>Jupyter Notebook相关操作</h3><p>修改密码</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> jupyter notebook password</span></code></pre>
-<p>服务启动</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda activate notebook</span>
-<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> /root/.jupyter</span>
-<span class="hljs-meta">$</span><span class="bash"> nohup jupyter notebook --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp;</span>
-[1] 21503</code></pre>
-<p>服务停止</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> ps aux</span>
-root     21503  ··· /root/anaconda3/bin/python /root/anaconda3/bin/jupyter-notebook --allow-root
-<span class="hljs-meta">$</span><span class="bash"> sudo <span class="hljs-built_in">kill</span> -21503 pid</span></code></pre>
-<p>重装内核</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> python -m ipykernel install --user</span></code></pre>
-<p>Jupyter Notebook切换conda虚拟环境插件安装</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda install nb_conda</span></code></pre>
-<p>jupyter_contrib_nbextensions插件安装</p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda install -c conda-forge jupyter_contrib_nbextensionsconda install -c</span>
-conda-forge jupyter_nbextensions_configurator</code></pre>
-<h2 id="code-server"><a href="#code-server" class="headerlink" title="code-server"></a>code-server</h2><h3 id="code-server相关操作"><a href="#code-server相关操作" class="headerlink" title="code-server相关操作"></a>code-server相关操作</h3><p>安装nginx</p>
-<pre><code class="hljs properties"><span class="hljs-attr">sudo</span> <span class="hljs-string">apt update</span>
-<span class="hljs-attr">sudo</span> <span class="hljs-string">apt install -y nginx certbot python-certbot-nginx</span></code></pre>
-<p>建立http映射，进入<code>/etc/nginx/sites-available/code-server</code></p>
-<pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;
-    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;
-    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;
-    <span class="hljs-attribute">server_name</span> mydomain.com;
+              <h2 id="ESP32云侧开发"><a href="#ESP32云侧开发" class="headerlink" title="ESP32云侧开发"></a>ESP32云侧开发</h2><h3 id="官方步骤"><a href="#官方步骤" class="headerlink" title="官方步骤"></a>官方步骤</h3><h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><p><a target="_blank" rel="noopener" href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html</a></p>
+<p>先进行环境配置，直接从<code>第五步：开始创建工程</code>开始</p>
+<p>打开bash终端，输入如下命令，因为环境变量配置在bash中。</p>
+<pre><code class="hljs bash">bash
+<span class="hljs-built_in">cd</span> ~/esp
+cp -r <span class="hljs-variable">$IDF_PATH</span>/examples/system/ota/simple_ota_example .</code></pre>
+<p>Demo参考(<a target="_blank" rel="noopener" href="https://blog.csdn.net/chen244798611/article/details/98121985">https://blog.csdn.net/chen244798611/article/details/98121985</a>)</p>
+<p>添加git管理</p>
+<pre><code class="hljs bash">git init
+cp esp-idf/.gitignore simple_ota_example/.gitignore</code></pre>
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><h5 id="idf-py编译"><a href="#idf-py编译" class="headerlink" title="idf.py编译"></a>idf.py编译</h5><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> simple_ota_example
+idf.py menuconfig
+idf.py build</code></pre>
+<h5 id="make编译-传统-GNU-Make"><a href="#make编译-传统-GNU-Make" class="headerlink" title="make编译 (传统 GNU Make)"></a>make编译 (传统 GNU Make)</h5><p><a target="_blank" rel="noopener" href="https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started-legacy/index.html">https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started-legacy/index.html</a></p>
+<p>使用bash，或者配置<code>IDF_PATH</code></p>
+<pre><code class="hljs bash">python -m pip install --user -r <span class="hljs-variable">$IDF_PATH</span>/requirements.txt</code></pre>
+<p>编译工程</p>
+<pre><code class="hljs bash">make</code></pre>
+<p>没有menuconfig可以运行</p>
+<pre><code class="hljs bash">make menuconfig</code></pre>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>云端无法连接设备下载，需要将bin文件利用<code>cp</code>命令通过jupter notebook下载到本地，再使用<code>flash_download_tool</code>进行下载。</p>
+<h3 id="Platformio使用"><a href="#Platformio使用" class="headerlink" title="Platformio使用"></a>Platformio使用</h3><p><a target="_blank" rel="noopener" href="https://docs.platformio.org/en/latest/tutorials/espressif32/espidf_debugging_unit_testing_analysis.html?utm_source=docs.espressif.com">https://docs.platformio.org/en/latest/tutorials/espressif32/espidf_debugging_unit_testing_analysis.html?utm_source=docs.espressif.com</a></p>
+<h4 id="安装Platformio"><a href="#安装Platformio" class="headerlink" title="安装Platformio"></a>安装Platformio</h4><p>使用VS Code安装Platformio IDE插件，如果需要使用PIO Remote功能，需要本地也安装，映射本地串口使用。 </p>
+<h4 id="打开Platformio终端"><a href="#打开Platformio终端" class="headerlink" title="打开Platformio终端"></a>打开Platformio终端</h4><p>使用Platformio的终端，<code>Ctrl + Shift + P</code>，然后输入PlatformIO:new terminal。</p>
+<pre><code class="hljs PlatformIO">cd ~&#x2F;esp&#x2F;simple_ota_example</code></pre>
 
-    <span class="hljs-attribute">location</span> / &#123;
-      <span class="hljs-attribute">proxy_pass</span> http://localhost:8080/;
-      <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>;
-      <span class="hljs-attribute">proxy_set_header</span> Upgrade <span class="hljs-variable">$http_upgrade</span>;
-      <span class="hljs-attribute">proxy_set_header</span> Connection upgrade;
-      <span class="hljs-attribute">proxy_set_header</span> Accept-Encoding gzip;
-    &#125;
-&#125;</code></pre>
-<pre><code class="hljs awk">sudo ln -s ..<span class="hljs-regexp">/sites-available/</span>code-server <span class="hljs-regexp">/etc/</span>nginx<span class="hljs-regexp">/sites-enabled/</span>code-server
-sudo certbot --non-interactive --redirect --agree-tos --nginx -d mydomain.com -m me@example.com</code></pre>
-<p><a target="_blank" rel="noopener" href="https://github.com/cdr/code-server/blob/master/doc/guide.md#lets-encrypt">https://github.com/cdr/code-server/blob/master/doc/guide.md#lets-encrypt</a></p>
-<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> systemctl --user restart code-server</span></code></pre>
-<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><h3 id="提高gitbub下载速度，修改-39-etc-host-39-中的DNS。"><a href="#提高gitbub下载速度，修改-39-etc-host-39-中的DNS。" class="headerlink" title="提高gitbub下载速度，修改&#39;/etc/host&#39;中的DNS。"></a>提高gitbub下载速度，修改<code>&#39;/etc/host&#39;</code>中的DNS。</h3><pre><code class="hljs css">140<span class="hljs-selector-class">.82</span><span class="hljs-selector-class">.114</span><span class="hljs-selector-class">.3</span>    <span class="hljs-selector-tag">github</span><span class="hljs-selector-class">.com</span>
-151<span class="hljs-selector-class">.101</span><span class="hljs-selector-class">.185</span><span class="hljs-selector-class">.194</span> <span class="hljs-selector-tag">github</span><span class="hljs-selector-class">.global</span><span class="hljs-selector-class">.ssl</span><span class="hljs-selector-class">.fastlu</span><span class="hljs-selector-class">.net</span></code></pre>
-<h3 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h3><pre><code class="hljs shell">netstat -aptn</code></pre>
-<h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><pre><code class="hljs shell">nginx</code></pre>
-<h3 id="启动hexo"><a href="#启动hexo" class="headerlink" title="启动hexo"></a>启动hexo</h3><pre><code class="hljs shell">cd ~/hexo-blog
-hexo server</code></pre>
-<h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><pre><code class="hljs shell">crontab [-u username] [-l|-e|-r]
-参数：
--u: 只有root才能进行这个任务，也即帮其他用户新建/删除crontab工作调度;
--e: 编辑crontab 的工作内容;
--l: 查阅crontab的工作内容;
--r: 删除所有的crontab的工作内容，若仅要删除一项，请用-e去编辑。</code></pre>
+<h4 id="创建Platformio工程"><a href="#创建Platformio工程" class="headerlink" title="创建Platformio工程"></a>创建Platformio工程</h4><pre><code class="hljs PlatformIO">pio project init -d ~&#x2F;esp&#x2F;simple_ota_exampleio -b esp-wrover-kit --ide vscode</code></pre>
+
+<h4 id="配置Platformio工程"><a href="#配置Platformio工程" class="headerlink" title="配置Platformio工程"></a>配置Platformio工程</h4><p>工程简单结构</p>
+<pre><code class="hljs reasonml">project_dir
+├── <span class="hljs-keyword">include</span>
+├── src
+│    ├── <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">CMakeLists</span>.</span></span>txt
+│    └── main.c
+├── <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">CMakeLists</span>.</span></span>txt
+└── platformio.ini</code></pre>
+<p>将platformio.ini文件中追加如下内容</p>
+<pre><code class="hljs ini"><span class="hljs-section">[platformio]</span>
+<span class="hljs-attr">src_dir</span> = main
+
+<span class="hljs-section">[env:esp-wrover-kit]</span>
+<span class="hljs-attr">platform</span> = espressif32
+<span class="hljs-attr">board</span> = esp-wrover-kit
+<span class="hljs-attr">framework</span> = espidf
+
+<span class="hljs-attr">upload_port</span> = COM4
+<span class="hljs-attr">upload_speed</span> = <span class="hljs-number">115200</span>
+<span class="hljs-attr">upload_protocol</span> = esptool</code></pre>
+
+<h4 id="编译工程并下载至远程设备"><a href="#编译工程并下载至远程设备" class="headerlink" title="编译工程并下载至远程设备"></a>编译工程并下载至远程设备</h4><p>需要本地VS Code安装Platformio IDE插件，并且启动服务</p>
+<pre><code class="hljs PlatformIO">pio remote agent start</code></pre>
+<p>然后在云端运行命令</p>
+<pre><code class="hljs PlatformIO">pio remote run --target upload -e esp-wrover-kit</code></pre>
+<p>第一次会根据platformio.ini的配置安装工具，安装目录在<code>~/.platformio</code>。</p>
+<p>idf路径在<code>~/.platformio/packages/framework-espidf</code>中。</p>
+<h4 id="监控远程设备"><a href="#监控远程设备" class="headerlink" title="监控远程设备"></a>监控远程设备</h4><pre><code class="hljs PlatformIO">pio remote device monitor -p COM4 -b 115200</code></pre>
             </div>
             <hr>
             <div>
@@ -297,9 +283,13 @@ hexo server</code></pre>
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E4%BA%91/">云</a>
+                      <a class="hover-with-bg" href="/tags/ESP32/">ESP32</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
+                      <a class="hover-with-bg" href="/tags/PlatformIO/">PlatformIO</a>
+                    
+                      <a class="hover-with-bg" href="/tags/IOT/">IOT</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%91/">云</a>
                     
                   </div>
                 
@@ -312,15 +302,15 @@ hexo server</code></pre>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/10/10/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8A%A0%E5%85%A5Echarts/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">博客中加入Echarts</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2020/10/10/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8A%A0%E5%85%A5Echarts/">
+                        <span class="hidden-mobile">博客中加入Echarts</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
