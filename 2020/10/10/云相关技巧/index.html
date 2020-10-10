@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Rehot">
+  <meta name="keywords" content="">
+  <title>云相关技巧 - 刘小皓的博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Rehot</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+                云相关技巧
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-10 13:40" pubdate>
+        2020年10月10日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      436 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">云相关技巧</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h5 id="提高gitbub下载速度，修改-39-etc-host-39-中的DNS。"><a href="#提高gitbub下载速度，修改-39-etc-host-39-中的DNS。" class="headerlink" title="提高gitbub下载速度，修改&#39;/etc/host&#39;中的DNS。"></a>提高gitbub下载速度，修改<code>&#39;/etc/host&#39;</code>中的DNS。</h5><pre><code class="hljs css">140<span class="hljs-selector-class">.82</span><span class="hljs-selector-class">.114</span><span class="hljs-selector-class">.3</span>    <span class="hljs-selector-tag">github</span><span class="hljs-selector-class">.com</span>
+151<span class="hljs-selector-class">.101</span><span class="hljs-selector-class">.185</span><span class="hljs-selector-class">.194</span> <span class="hljs-selector-tag">github</span><span class="hljs-selector-class">.global</span><span class="hljs-selector-class">.ssl</span><span class="hljs-selector-class">.fastlu</span><span class="hljs-selector-class">.net</span></code></pre>
+<h5 id="Docker进入实例中进行文件编辑"><a href="#Docker进入实例中进行文件编辑" class="headerlink" title="Docker进入实例中进行文件编辑"></a>Docker进入实例中进行文件编辑</h5><p>8d2281dd8cf6为实例ID</p>
+<pre><code class="hljs awk">$ sudo docker exec -it <span class="hljs-number">8</span>d2281dd8cf6 <span class="hljs-regexp">/bin/</span>bash
+$ <span class="hljs-keyword">exit</span></code></pre>
+<h5 id="Docker阿里云加速"><a href="#Docker阿里云加速" class="headerlink" title="Docker阿里云加速"></a>Docker阿里云加速</h5><pre><code class="hljs stylus">$ sudo docker login --username=liuchenhao891113@sina<span class="hljs-selector-class">.com</span> registry<span class="hljs-selector-class">.cn-hangzhou</span><span class="hljs-selector-class">.aliyuncs</span>.com
+&gt; lch891113</code></pre>
+<h5 id="Docker创建BT下载服务器容器"><a href="#Docker创建BT下载服务器容器" class="headerlink" title="Docker创建BT下载服务器容器"></a>Docker创建BT下载服务器容器</h5><pre><code class="hljs routeros">docker create \
+  <span class="hljs-attribute">--name</span>=qbittorrent \
+  -e <span class="hljs-attribute">PUID</span>=1000 \
+  -e <span class="hljs-attribute">PGID</span>=1000 \
+  -e <span class="hljs-attribute">TZ</span>=Aisa/Shanghai \
+  -e <span class="hljs-attribute">UMASK_SET</span>=022 \
+  -e <span class="hljs-attribute">WEBUI_PORT</span>=8081 \
+  -p 8999:8999 \
+  -p 8999:8999/udp \
+  -p 8081:8081 \
+  -v /path/<span class="hljs-keyword">to</span>/appdata/config:<span class="hljs-built_in">/config </span>\
+  -v /path/<span class="hljs-keyword">to</span>/downloads:/downloads \
+  --restart unless-stopped \
+  linuxserver/qbittorrent</code></pre>
+<h5 id="Jupyter-Notebook相关操作"><a href="#Jupyter-Notebook相关操作" class="headerlink" title="Jupyter Notebook相关操作"></a>Jupyter Notebook相关操作</h5><p>修改密码</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> jupyter notebook password</span></code></pre>
+<p>服务启动</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda activate notebook</span>
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> /root/.jupyter</span>
+<span class="hljs-meta">$</span><span class="bash"> nohup jupyter notebook --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp;</span>
+[1] 21503</code></pre>
+<p>服务停止</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> ps aux</span>
+root     21503  ··· /root/anaconda3/bin/python /root/anaconda3/bin/jupyter-notebook --allow-root
+<span class="hljs-meta">$</span><span class="bash"> sudo <span class="hljs-built_in">kill</span> -21503 pid</span></code></pre>
+<p>重装内核</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> python -m ipykernel install --user</span></code></pre>
+<p>Jupyter Notebook切换conda虚拟环境插件安装</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda install nb_conda</span></code></pre>
+<p>jupyter_contrib_nbextensions插件安装</p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> conda install -c conda-forge jupyter_contrib_nbextensionsconda install -c</span>
+conda-forge jupyter_nbextensions_configurator</code></pre>
+<h5 id="code-server启动"><a href="#code-server启动" class="headerlink" title="code-server启动"></a>code-server启动</h5><p>安装nginx</p>
+<pre><code class="hljs properties"><span class="hljs-attr">sudo</span> <span class="hljs-string">apt update</span>
+<span class="hljs-attr">sudo</span> <span class="hljs-string">apt install -y nginx certbot python-certbot-nginx</span></code></pre>
+<p>建立http映射，进入<code>/etc/nginx/sites-available/code-server</code></p>
+<pre><code class="hljs nginx"><span class="hljs-section">server</span> &#123;
+    <span class="hljs-attribute">listen</span> <span class="hljs-number">80</span>;
+    <span class="hljs-attribute">listen</span> [::]:<span class="hljs-number">80</span>;
+    <span class="hljs-attribute">server_name</span> mydomain.com;
+
+    <span class="hljs-attribute">location</span> / &#123;
+      <span class="hljs-attribute">proxy_pass</span> http://localhost:8080/;
+      <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$host</span>;
+      <span class="hljs-attribute">proxy_set_header</span> Upgrade <span class="hljs-variable">$http_upgrade</span>;
+      <span class="hljs-attribute">proxy_set_header</span> Connection upgrade;
+      <span class="hljs-attribute">proxy_set_header</span> Accept-Encoding gzip;
+    &#125;
+&#125;</code></pre>
+<pre><code class="hljs awk">sudo ln -s ..<span class="hljs-regexp">/sites-available/</span>code-server <span class="hljs-regexp">/etc/</span>nginx<span class="hljs-regexp">/sites-enabled/</span>code-server
+sudo certbot --non-interactive --redirect --agree-tos --nginx -d mydomain.com -m me@example.com</code></pre>
+<p><a target="_blank" rel="noopener" href="https://github.com/cdr/code-server/blob/master/doc/guide.md#lets-encrypt">https://github.com/cdr/code-server/blob/master/doc/guide.md#lets-encrypt</a></p>
+<pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> systemctl --user restart code-server</span></code></pre>
+<h5 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h5><pre><code class="hljs shell">netstat -aptn</code></pre>
+<h5 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h5><pre><code class="hljs shell">nginx</code></pre>
+<h5 id="启动hexo"><a href="#启动hexo" class="headerlink" title="启动hexo"></a>启动hexo</h5><pre><code class="hljs shell">cd ~/hexo-blog
+hexo server</code></pre>
+<h5 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h5><pre><code class="hljs shell">crontab [-u username] [-l|-e|-r]
+参数：
+-u: 只有root才能进行这个任务，也即帮其他用户新建/删除crontab工作调度;
+-e: 编辑crontab 的工作内容;
+-l: 查阅crontab的工作内容;
+-r: 删除所有的crontab的工作内容，若仅要删除一项，请用-e去编辑。</code></pre>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+    
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

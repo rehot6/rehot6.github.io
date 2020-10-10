@@ -17,10 +17,23 @@
   <meta name="description" content="">
   <meta name="author" content="Rehot">
   <meta name="keywords" content="">
-  <title>归档 - 刘小皓的博客</title>
+  <title>about - 刘小皓的博客</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -132,7 +145,7 @@
           <div class="container page-header text-center fade-in-up">
             <span class="h2" id="subtitle">
               
-                归档
+                about
               
             </span>
 
@@ -156,22 +169,9 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-    
-      
-      <p class="h5">2020</p>
-    
-    <a href="/2020/10/10/%E4%BA%91%E7%9B%B8%E5%85%B3%E6%8A%80%E5%B7%A7/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">云相关技巧</span>
-      <time style="float: right;">10-10</time>
-    </a>
+<div class="page-content">
   
 </div>
-
-
 
               </div>
             </div>
@@ -257,6 +257,21 @@
 
 
 
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
 
 
 
