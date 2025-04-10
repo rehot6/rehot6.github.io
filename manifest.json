@@ -1,0 +1,21 @@
+{
+    "name": "Rehot 网址导航",
+    "short_name": "网址导航",
+    "description": "Rehot 网址导航",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#2F3BA2",
+    "background_color": "#FFFFFF",
+    "icons": [
+      {
+        "src": "icons/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
