@@ -4,8 +4,8 @@
     "description": "Rehot 网址导航",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#2F3BA2",
-    "background_color": "#F4F4FC",
+    "theme_color": "#F4F4FC",
+    "background_color": "#FFFFFF",
     "icons": [
       {
         "src": "icons/icon-192x192.png",
