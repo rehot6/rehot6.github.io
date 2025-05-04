@@ -1,7 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 // 重要：每次构建时自动生成唯一版本号（需在Hugo构建流程中实现）
-const CACHE_VERSION = '1746323824-ff48e17';  // 每次部署递增版本号
+const CACHE_VERSION = '1746324685-95a0d1f';  // 每次部署递增版本号
 const PRE_CACHE_NAME = `precache-${CACHE_VERSION}`;
 
 // ========== 核心修改点 1：动态版本控制 ==========
@@ -48,21 +48,3 @@ workbox.routing.registerRoute(
     ]
   })
 );
-
-// ========== 核心修改点 3：强制更新机制 ==========
-// 立即接管控制权
-workbox.core.clientsClaim();
-self.addEventListener('install', () => self.skipWaiting());
-
-// 清理旧版本缓存
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames
-          .filter(name => name !== PRE_CACHE_NAME && 
-                         !name.includes(CACHE_VERSION))
-          .map(name => caches.delete(name))
-    })
-  );
-});
