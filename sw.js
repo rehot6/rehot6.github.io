@@ -1,7 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 // 重要：每次构建时自动生成唯一版本号（需在Hugo构建流程中实现）
-const CACHE_VERSION = '1776079091-9409bee';  // 每次部署递增版本号
+const CACHE_VERSION = '1776756592-14c8456';  // 每次部署递增版本号
 const PRE_CACHE_NAME = `precache-${CACHE_VERSION}`;
 
 // ========== 核心修改点 1：动态版本控制 ==========
